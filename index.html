@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e24b1dc801.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX Design</p>
+            <h1>Hello, <span>World!</span><br>I am Malak</h1>
+        </div>
+    </div>
+</div>
+<!------------about----------- -->
+<dic id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="pictures/me2.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> I am a first year computer science student at UNC-Chapel Hill.
+                I aspire to become a full stack software developer.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Desigining Apps</li>
+                        <li><span>Coding</span><br>Python - HTML - CSS</li>
+                        <li><span>Desigining Applications</span><br>Figma</li>
+                        <li><span>Content Manager</span><br>Instagram</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - Current</span><br>UNC- Chapel Hill<br>B.S. Computer Science</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</dic>
+<!------------portfolio----------- -->
+<dic id="portfolio">
+    <div class="container">
+        <div class="overlay">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work">
+                <img src="pictures/game.png" alt="A Text Adventure Game">
+                <div class="layer">
+                    <h3>A Text Adventure Game</h3>
+                    <p>This is the Riddle game.
+                    The player answers three riddles that are randomly generated.</p>
+                    <!--<a href="#"><i class="fa-solid fa-code"></i></a> -->
+                    <a href="https://codesandbox.io/p/sandbox/competent-https-iqs1z3?file=%2Fmain.py&selection=%5B%7B%22endColumn%22%3A20%2C%22endLineNumber%22%3A8%2C%22startColumn%22%3A20%2C%22startLineNumber%22%3A8%7D%5D">
+                        <i class="fa-solid fa-code"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</dic>
+
+<!------------Contact----------- -->
+<div id="contcat">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="'sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> malaksoubai03@gmail.com</p>
+                <p><i class="fa-sharp fa-solid fa-phone"></i> 678 362 2766</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/malak-soubai/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/smalak_03/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <a href="pictures/Malak Resume.pdf" download class="btn btn2">Dowload CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="emlail" name="email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Malak. Made with <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tacontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementsById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
